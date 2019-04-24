@@ -44,7 +44,7 @@ class FlutterBlue {
   Future<bool> get isOn => _channel.invokeMethod('isOn').then<bool>((d) => d);
 
   /// Gets the current state of the Bluetooth module
-  Future<BluetoothState> get state {
+  Future<BluetoothState> get state1 {
     return _channel
         .invokeMethod('state')
         .then((buffer) => new protos.BluetoothState.fromBuffer(buffer))
